@@ -148,3 +148,31 @@ Allows users to find properties based on criteria like location, price range, av
 
 ### 7. Admin Dashboard (Future Feature)
 Provides administrators with tools to oversee users, listings, and bookings. It ensures platform integrity by monitoring activity, handling disputes, and enforcing policies.
+
+## API Security
+
+### 1. Authentication
+Only verified users can access the platform through secure login mechanisms (e.g., JWT tokens or OAuth2). This ensures that sensitive actions like bookings, reviews, and payments are only performed by legitimate users.  
+**Why:** Protects user accounts from unauthorized access.
+
+### 2. Authorization
+Role-based access control will be enforced to differentiate between guests, hosts, and admins. For example, only hosts can create property listings, while only admins can manage disputes.  
+**Why:** Prevents unauthorized users from performing restricted actions.
+
+### 3. Data Encryption
+Sensitive data such as passwords will be hashed (e.g., using bcrypt) and communications between the client and server will use HTTPS (TLS).  
+**Why:** Protects against data breaches and keeps user information secure during transmission.
+
+### 4. Rate Limiting & Throttling
+API requests will be rate-limited to prevent abuse such as brute-force attacks or denial-of-service attempts.  
+**Why:** Ensures platform stability and protects against malicious automated requests.
+
+### 5. Secure Payments
+Payment data will be handled using trusted third-party payment gateways (e.g., Stripe or PayPal) rather than storing sensitive financial details on the server.  
+**Why:** Ensures financial transactions are processed securely and reduces risk of fraud.
+
+### 6. Input Validation & Sanitization
+All inputs (e.g., user registration, property details, search queries) will be validated and sanitized before processing.  
+**Why:** Prevents security vulnerabilities like SQL injection, XSS (Cross-Site Scripting), and data corruption.
+
+---
