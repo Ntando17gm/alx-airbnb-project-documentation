@@ -43,3 +43,85 @@ Handles deployment, continuous integration, and monitoring. They make sure the a
 - **Docker (future deployment)**: Containerization technology to package and deploy the application consistently across different environments.
 
 - **Heroku / AWS (future deployment)**: Cloud platforms for deploying, scaling, and hosting the application in production.
+
+## Database Design
+
+### 1. Users
+Represents individuals who can act as hosts (listing properties) or guests (making bookings).
+- **id**: Unique identifier for each user.  
+- **name**: Full name of the user.  
+- **email**: User’s login email (unique).  
+- **password_hash**: Encrypted password for authentication.  
+- **role**: Defines if the user is a host, guest, or admin.  
+
+**Relationships:**  
+- A user can list multiple properties.  
+- A user can make multiple bookings.  
+- A user can leave multiple reviews.  
+
+---
+
+### 2. Properties
+Represents the accommodations listed on the platform.
+- **id**: Unique identifier for each property.  
+- **title**: Name/short description of the property.  
+- **description**: Detailed information about the property.  
+- **location**: Address or city where the property is located.  
+- **price_per_night**: Cost to book the property per night.  
+
+**Relationships:**  
+- A property belongs to a user (host).  
+- A property can have multiple bookings.  
+- A property can have multiple reviews.  
+
+---
+
+### 3. Bookings
+Represents reservations made by guests for properties.
+- **id**: Unique identifier for each booking.  
+- **user_id**: The guest making the booking.  
+- **property_id**: The property being booked.  
+- **start_date**: Check-in date.  
+- **end_date**: Check-out date.  
+
+**Relationships:**  
+- A booking belongs to a user (guest).  
+- A booking belongs to a property.  
+- A booking may be linked to a payment.  
+
+---
+
+### 4. Reviews
+Captures feedback from guests about properties.
+- **id**: Unique identifier for each review.  
+- **user_id**: The guest who wrote the review.  
+- **property_id**: The property being reviewed.  
+- **rating**: Numeric score (e.g., 1–5).  
+- **comment**: Written feedback.  
+
+**Relationships:**  
+- A review belongs to a user (guest).  
+- A review belongs to a property.  
+
+---
+
+### 5. Payments
+Tracks transactions for bookings.
+- **id**: Unique identifier for each payment.  
+- **booking_id**: The booking associated with the payment.  
+- **amount**: Total amount paid.  
+- **payment_status**: Status of the transaction (e.g., pending, completed, failed).  
+- **payment_date**: Date the payment was made.  
+
+**Relationships:**  
+- A payment belongs to a booking.  
+- A booking can have one payment.  
+
+---
+
+### Entity Relationships Summary
+- A **User** can create multiple **Properties**.  
+- A **Property** can have multiple **Bookings**.  
+- A **Booking** is linked to one **Property** and one **User** (guest).  
+- A **Booking** may have one **Payment**.  
+- A **Property** can have multiple **Reviews** from different **Users**.  
