@@ -125,3 +125,26 @@ Tracks transactions for bookings.
 - A **Booking** is linked to one **Property** and one **User** (guest).  
 - A **Booking** may have one **Payment**.  
 - A **Property** can have multiple **Reviews** from different **Users**.  
+
+## Feature Breakdown
+
+### 1. User Management
+Handles registration, authentication, and authorization of users. It ensures secure access to the platform and defines roles such as hosts (who list properties) and guests (who book properties).
+
+### 2. Property Management
+Allows hosts to create, update, and manage their property listings. Each listing includes details like title, description, location, price per night, and availability, enabling guests to browse options.
+
+### 3. Booking System
+Enables guests to reserve properties for specific dates. It manages availability, prevents double bookings, and ensures smooth coordination between hosts and guests.
+
+### 4. Review & Rating System
+Provides a way for guests to leave feedback on properties they’ve stayed in. This feature builds trust, helps future guests make informed decisions, and allows hosts to improve their offerings.
+
+### 5. Payment Processing
+Manages transactions between guests and hosts. It securely handles payments, tracks booking fees, and records transaction statuses to ensure financial transparency.
+
+### 6. Search & Filtering
+Allows users to find properties based on criteria like location, price range, availability, and ratings. This makes the platform user-friendly by helping guests quickly find suitable options.
+
+### 7. Admin Dashboard (Future Feature)
+Provides administrators with tools to oversee users, listings, and bookings. It ensures platform integrity by monitoring activity, handling disputes, and enforcing policies.
