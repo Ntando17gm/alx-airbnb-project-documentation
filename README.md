@@ -176,3 +176,20 @@ All inputs (e.g., user registration, property details, search queries) will be v
 **Why:** Prevents security vulnerabilities like SQL injection, XSS (Cross-Site Scripting), and data corruption.
 
 ---
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+CI/CD (Continuous Integration and Continuous Deployment) is a set of practices that automate the process of building, testing, and deploying applications. Continuous Integration ensures that code changes are frequently merged, tested, and verified, while Continuous Deployment automates the release of those changes into production environments.
+
+### Why It’s Important
+- **Reliability:** Ensures new code changes don’t break existing functionality by running automated tests.  
+- **Speed:** Speeds up development by reducing manual testing and deployment processes.  
+- **Consistency:** Provides a standardized, repeatable way to build and deploy the project.  
+- **Collaboration:** Helps teams integrate work seamlessly, reducing conflicts and improving code quality.  
+
+### Tools to Be Used
+- **GitHub Actions:** For automating workflows such as testing, linting, and deployment directly from the GitHub repository.  
+- **Docker:** For containerizing the application to ensure consistent behavior across development, staging, and production environments.  
+- **Heroku / AWS (future deployment):** For hosting the application with automated deployment from the CI/CD pipeline.  
+- **pytest / unit testing frameworks:** For running automated tests as part of the pipeline to validate code changes.
