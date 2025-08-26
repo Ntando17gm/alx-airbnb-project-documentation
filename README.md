@@ -23,3 +23,23 @@ Tests the application to identify and fix bugs before release. QA engineers vali
 
 ### 7. DevOps Engineer
 Handles deployment, continuous integration, and monitoring. They make sure the application runs smoothly in production, is scalable, and has reliable backup and recovery processes.
+
+## Technology Stack
+
+- **Django**: A high-level Python web framework used for building the backend and RESTful APIs. It provides robust tools for authentication, routing, and handling business logic.
+
+- **PostgreSQL**: A powerful, open-source relational database used to store application data such as user profiles, property listings, bookings, and reviews.
+
+- **GraphQL**: A query language for APIs that allows clients to request exactly the data they need. It improves efficiency in data fetching compared to traditional REST endpoints.
+
+- **JavaScript (ES6+)**: Used for interactive features on the frontend and for connecting backend logic to user-facing components.
+
+- **React (optional in later stages)**: A JavaScript library for building user interfaces. It allows for creating reusable, dynamic components and improves frontend scalability.
+
+- **HTML & CSS**: Core technologies for structuring and styling the user interface, ensuring the platform is responsive and visually appealing.
+
+- **Git & GitHub**: Version control and collaboration tools used for tracking changes in the codebase and managing project contributions.
+
+- **Docker (future deployment)**: Containerization technology to package and deploy the application consistently across different environments.
+
+- **Heroku / AWS (future deployment)**: Cloud platforms for deploying, scaling, and hosting the application in production.
