@@ -193,3 +193,54 @@ CI/CD (Continuous Integration and Continuous Deployment) is a set of practices t
 - **Docker:** For containerizing the application to ensure consistent behavior across development, staging, and production environments.  
 - **Heroku / AWS (future deployment):** For hosting the application with automated deployment from the CI/CD pipeline.  
 - **pytest / unit testing frameworks:** For running automated tests as part of the pipeline to validate code changes.
+
+---
+
+# Airbnb Clone Backend – Features and Functionalities
+
+This document outlines the key **features and functionalities** required to build the backend for the Airbnb Clone project. The requirements are divided into three categories: **Core Functionalities, Technical Requirements, and Non-Functional Requirements**.
+
+---
+
+## Core Functionalities
+- **User Management**
+  - Registration (Guests/Hosts) with JWT + OAuth
+  - Login and Authentication
+  - Profile Management
+- **Property Listings Management**
+  - Add, edit, and delete property listings
+- **Search and Filtering**
+  - Location, price range, guest count, amenities
+- **Booking Management**
+  - Create, cancel, and track bookings
+- **Payments**
+  - Guest payments, host payouts, multi-currency support
+- **Reviews and Ratings**
+  - Guest reviews, host responses
+- **Notifications**
+  - Email and in-app booking/payment updates
+- **Admin Dashboard**
+  - Manage users, listings, bookings, payments
+
+---
+
+## Technical Requirements
+- Relational Database (PostgreSQL/MySQL)
+- RESTful APIs (+ optional GraphQL)
+- Authentication & Authorization (JWT + RBAC)
+- File Storage (AWS S3 or Cloudinary)
+- Third-party integrations (SendGrid/Mailgun)
+- Global Error Handling and Logging
+
+---
+
+## Non-Functional Requirements
+- **Scalability** – Modular design, load balancing
+- **Security** – Encryption, firewalls, rate limiting
+- **Performance** – Caching with Redis, DB optimization
+- **Testing** – Unit tests, integration tests, automated API tests
+
+---
+
+The PNG diagram (`airbnb-backend-features.png`) provides a **visual representation** of these requirements for quick reference.
+
