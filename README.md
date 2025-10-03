@@ -196,3 +196,101 @@ CI/CD (Continuous Integration and Continuous Deployment) is a set of practices t
 
 ---
 
+# Features & Functionalities — Airbnb Clone (Backend)
+
+## Overview
+This document lists the key backend features and functionalities of the Airbnb Clone project.  
+It also references the diagram `features-and-functionalities.png`.
+
+---
+
+## Core Features
+
+### 1. Authentication & Authorization
+- User registration & login
+- Password hashing (bcrypt)
+- JSON Web Token (JWT) authentication
+- Roles: Guest, Host, Admin
+
+### 2. User Profiles
+- Profile creation & updates
+- Host verification
+- Profile picture upload
+- Contact details
+
+### 3. Property Management
+- Create, update, delete listings
+- Upload images (S3 or similar)
+- Set pricing, amenities, rules, and availability
+
+### 4. Search & Filtering
+- Search by location, date, price, amenities
+- Sort by relevance, rating, or price
+- Availability calendar integration
+
+### 5. Booking System
+- Request, confirm, and cancel bookings
+- Check availability before booking
+- Refund and cancellation policies
+- Host approval workflow (optional)
+
+### 6. Payments
+- Integration with Stripe/PayPal
+- Secure payment processing
+- Refunds and webhooks
+- Invoices and receipts
+
+### 7. Reviews & Ratings
+- Guests review hosts & properties
+- Hosts review guests
+- Star ratings and comments
+
+### 8. Notifications
+- Email confirmations
+- SMS reminders
+- Push notifications (optional)
+
+### 9. Admin Panel
+- Manage users, properties, and bookings
+- Handle disputes
+- Reporting and analytics
+
+### 10. System Features
+- Logging and monitoring
+- Background jobs (email, reminders)
+- Rate limiting & security
+- Data backups
+
+---
+
+## Data Model (High Level)
+- **User**
+- **Property**
+- **Booking**
+- **Payment**
+- **Review**
+- **Image**
+- **Availability**
+
+---
+
+## Example API Endpoints
+
+| Endpoint                | Method | Description                        |
+|--------------------------|--------|------------------------------------|
+| `/auth/register`         | POST   | Register new user                  |
+| `/auth/login`            | POST   | Login and return JWT               |
+| `/users/:id`             | GET    | Get user profile                   |
+| `/properties`            | GET    | List/search properties             |
+| `/properties`            | POST   | Create a new property (host only)  |
+| `/bookings`              | POST   | Create a new booking               |
+| `/bookings/:id/cancel`   | PUT    | Cancel an existing booking         |
+| `/payments/charge`       | POST   | Process a payment                  |
+| `/reviews`               | POST   | Submit a review                    |
+
+---
+
+## Diagram
+Below is the feature overview diagram:  
+
+![](features-and-functionalities.png)
