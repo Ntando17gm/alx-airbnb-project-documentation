@@ -292,7 +292,7 @@ It also references the diagram `features-and-functionalities.png`.
 ## Diagram
 Below is the feature overview diagram:  
 
-![](features-and-functionalities..drawio.png)
+![](features-and-functionalities.png)
 
 
 ## API Endpoints (Detailed)
