@@ -195,139 +195,18 @@ CI/CD (Continuous Integration and Continuous Deployment) is a set of practices t
 - **pytest / unit testing frameworks:** For running automated tests as part of the pipeline to validate code changes.
 
 ---
-# Features & Functionalities — Airbnb Clone (Backend)
+# Airbnb Clone - Features and Functionalities
 
-## Overview
-This document lists the key backend features and functionalities of the Airbnb Clone project.  
-It also references the diagram `features-and-functionalities.png`.
+This document lists the main features and backend functionalities of the Airbnb Clone project.
 
----
+## Key Features
+- User Authentication (Login, Register)
+- Property Listing Management
+- Booking and Reservation System
+- Payment Integration
+- User Profile Management
 
-## Core Features
+Below is a diagram representing the overall features of the system:
 
-### 1. Authentication & Authorization
-- User registration & login
-- Password hashing (bcrypt)
-- JSON Web Token (JWT) authentication
-- Roles: Guest, Host, Admin
-
-### 2. User Profiles
-- Profile creation & updates
-- Host verification
-- Profile picture upload
-- Contact details
-
-### 3. Property Management
-- Create, update, delete listings
-- Upload images (S3 or similar)
-- Set pricing, amenities, rules, and availability
-
-### 4. Search & Filtering
-- Search by location, date, price, amenities
-- Sort by relevance, rating, or price
-- Availability calendar integration
-
-### 5. Booking System
-- Request, confirm, and cancel bookings
-- Check availability before booking
-- Refund and cancellation policies
-- Host approval workflow (optional)
-
-### 6. Payments
-- Integration with Stripe/PayPal
-- Secure payment processing
-- Refunds and webhooks
-- Invoices and receipts
-
-### 7. Reviews & Ratings
-- Guests review hosts & properties
-- Hosts review guests
-- Star ratings and comments
-
-### 8. Notifications
-- Email confirmations
-- SMS reminders
-- Push notifications (optional)
-
-### 9. Admin Panel
-- Manage users, properties, and bookings
-- Handle disputes
-- Reporting and analytics
-
-### 10. System Features
-- Logging and monitoring
-- Background jobs (email, reminders)
-- Rate limiting & security
-- Data backups
-
----
-
-## Data Model (High Level)
-- **User**
-- **Property**
-- **Booking**
-- **Payment**
-- **Review**
-- **Image**
-- **Availability**
-
----
-
-## Example API Endpoints
-
-| Endpoint                | Method | Description                        |
-|--------------------------|--------|------------------------------------|
-| `/auth/register`         | POST   | Register new user                  |
-| `/auth/login`            | POST   | Login and return JWT               |
-| `/users/:id`             | GET    | Get user profile                   |
-| `/properties`            | GET    | List/search properties             |
-| `/properties`            | POST   | Create a new property (host only)  |
-| `/bookings`              | POST   | Create a new booking               |
-| `/bookings/:id/cancel`   | PUT    | Cancel an existing booking         |
-| `/payments/charge`       | POST   | Process a payment                  |
-| `/reviews`               | POST   | Submit a review                    |
-
----
-
-## Diagram
-Below is the feature overview diagram:  
-
-![](features-and-functionalities.png)
-
-
-## API Endpoints (Detailed)
-
-### Authentication
-| Endpoint        | Method | Description              | Auth Required |
-|-----------------|--------|--------------------------|---------------|
-| `/auth/register`| POST   | Register a new user      | No            |
-| `/auth/login`   | POST   | Login user (returns JWT) | No            |
-
-### Users
-| Endpoint        | Method | Description              | Auth Required |
-|-----------------|--------|--------------------------|---------------|
-| `/users/:id`    | GET    | Get user profile         | Yes           |
-| `/users/:id`    | PUT    | Update user profile      | Yes           |
-
-### Properties
-| Endpoint        | Method | Description                        | Auth Required |
-|-----------------|--------|------------------------------------|---------------|
-| `/properties`   | GET    | List/search properties             | No            |
-| `/properties`   | POST   | Create a property (host only)      | Yes (Host)    |
-| `/properties/:id`| GET   | Get property details               | No            |
-| `/properties/:id`| PUT   | Update property (host only)        | Yes (Host)    |
-
-### Bookings
-| Endpoint          | Method | Description              | Auth Required |
-|-------------------|--------|--------------------------|---------------|
-| `/bookings`       | POST   | Create a new booking     | Yes (Guest)   |
-| `/bookings/:id`   | GET    | Get booking details      | Yes           |
-| `/bookings/:id/cancel` | PUT | Cancel booking         | Yes (Guest)   |
-
-### Payments
-| Endpoint           | Method | Description            | Auth Required |
-|--------------------|--------|------------------------|---------------|
-| `/payments/charge` | POST   | Process a payment      | Yes           |
-| `/payments/refund` | POST   | Issue a refund         | Yes (Admin)   |
-
+![Features Diagram](./features-and-functionalities.png)
 
