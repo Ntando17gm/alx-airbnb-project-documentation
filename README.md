@@ -195,7 +195,7 @@ CI/CD (Continuous Integration and Continuous Deployment) is a set of practices t
 - **pytest / unit testing frameworks:** For running automated tests as part of the pipeline to validate code changes.
 
 ---
-# Features & Functionalities — Airbnb Clone (Backend)
+# Features & Functionalities 
 
 ## Overview
 This document lists the key backend features and functionalities of the Airbnb Clone project.  
