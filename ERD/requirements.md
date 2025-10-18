@@ -16,7 +16,7 @@
 ## ER Diagram Preview
 Below is a simplified preview of the database relationships:
 
-![Airbnb ERD](alx-airbnb-project-documentation/ERD/airbnb_erd.png)
+![Airbnb ERD](./ERD/airbnb_erd.png)
 
 ---
 
