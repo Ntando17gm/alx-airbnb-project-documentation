@@ -11,14 +11,12 @@
 - **Amenity** – Represents property features (WiFi, pool, etc.)  
 - **Property_Amenity** – Many-to-many relationship between properties and amenities  
 
-For detailed information, refer to the [requirements.md](./ERD/requirements.md) file.
-
 ---
 
 ## ER Diagram Preview
 Below is a simplified preview of the database relationships:
 
-![Airbnb ERD](./ERD/airbnb_erd-2.png)
+![Airbnb ERD](./ERD/airbnb_erd.png)
 
 ---
 
